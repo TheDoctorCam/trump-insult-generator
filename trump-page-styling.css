@@ -1,0 +1,171 @@
+/* Color Variables */
+:root{
+  --navy: #3d3d79;
+  --white: #FFFFFF;
+  --red: #cc2539;
+  --test: #cc4343;
+}
+
+.wrapper{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: var(--test);
+}
+
+/* Parent Flexbox */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.quote-box{
+  margin-top: 10px;
+  font-family: 'Fjalla One', sans-serif;
+  color: var(--white);
+  order: 1;
+  text-align: center;
+  width: 100%;
+
+}
+
+.quote-text, .author-text{
+  font-size: 30px;
+}
+
+.button-row{
+  order: 2;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button{
+  font-family: 'Fjalla One', sans-serif;
+  background-color: var(--navy);
+  border: solid var(--navy);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.button:hover{
+  background-color: white;
+  color: var(--navy);
+  border: solid white;
+  transition: .7s;
+}
+.trump-pic{
+  order: 3;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.footer{
+  background-color: var(--navy);
+  order: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-pic{
+  margin-top: 10px;
+  height: 100px;
+}
+
+#footer h3{
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 15px;
+  color: white;
+  width: 100px;
+  height: 100px;
+  margin: 30px 0px 0px 20px;
+}
+
+.social-row{
+  margin-top: -10px;
+  order: 5;
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 10px;
+}
+
+.social-row i{
+ 
+  color: white;
+}
+
+.social-row i:hover{
+  color: var(--test);
+  transition: .5s;
+}
+
+#footer .heart{
+  font-family: 'Fjalla One', sans-serif;
+  color: white;
+  font-size: 14px;
+  padding-bottom: 10px;
+  order: 6;
+}
+
+#footer .heart i{
+  margin-top: 3px;
+  position: absolute;
+  color: #e32037;
+  animation: 1.4s linear 0s normal none infinite blink;
+}
+
+.heart:before{
+  content: "Made with";
+}
+
+.heart:after{
+  content: "in Tallahassee, FL";
+  padding-left: 17px;
+}
+
+.social-icons{
+  color: white;
+  text-align: center !important;
+  margin-left: -50px;
+}
+
+.social-icons li{
+  display: inline-block;
+}
+
+
+/* Keyframes for :before :after pseduo elements */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+ @media screen and (min-width: 800px){
+    .quote-text { font-size: 45px; }
+    .button-row { width: 75%; }
+  }
+
+ @media screen and (min-width: 1000px){
+  .button-row{ width: 60%; }
+}
